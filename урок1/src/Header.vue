@@ -13,18 +13,24 @@
         <p class="text-header">Меню</p>
         </div>
         <div class="haeder2">
-        <img class="menu" scr="/profil.svg">
+        <img class="menu" scr="/person.svg">
         <p class="text-header">Профиль</p>
         </div>
         <div class="haeder2">
         <img class="menu" src="/korz.svg">
         <p class="text-header">Корзина</p>
-        <p> Товаров:{{ korzina }}</p>
+        <p class="make"> Товаров:{{ korzina }}</p>
         </div>
     </div>
 </template>
 
 <style>
+    .make{
+        justify-content: center;
+        flex-direction: row;
+        margin-top: 49px;
+        margin-left: 100px;
+    }
     .hader{
         gap: 100px;
         display: flex;

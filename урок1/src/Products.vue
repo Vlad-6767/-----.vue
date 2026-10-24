@@ -49,7 +49,7 @@ import { ref } from 'vue';
                 <p1 class="price">8906₽</p1>
                 <p2 class='keyboard' >Клавиатура магнитная с подсветкой</p2>
                 <p3 class='opisanie'>Модель: Mercury V60Pro XTAL Гарантийный срок: 1 год Артикул:1110231413</p3>
-                <button @click="emit(['reliz'])" class="button1">В корзину</button>
+                <button @click="emit('reliz')" class="button1">В корзину</button>
 
             </div>
         </div>
