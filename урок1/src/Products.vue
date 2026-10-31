@@ -16,46 +16,8 @@ import { ref } from 'vue';
                 </div>
                 <button class="button1">В корзину</button>
             </div>
-            <div class="keyBoard1">
-                <img src="https://ekt-basket-cdn-12.geobasket.ru/vol11102/part1110231/1110231413/images/big/1.webp" alt="keyBoard">
-                <p1 class="price">8906₽</p1>
-                <p2 class='keyboard' >Клавиатура магнитная с подсветкой</p2>
-                <p3 class='opisanie'>Модель: Mercury V60Pro XTAL Гарантийный срок: 1 год Артикул:1110231413</p3>
-                <button class="button1">В корзину</button>
-            </div>
-            <div class="keyBoard1">
-                <img src="https://ekt-basket-cdn-12.geobasket.ru/vol11102/part1110231/1110231413/images/big/1.webp" alt="keyBoard">
-                <p1 class="price">8906₽</p1>
-                <p2 class='keyboard' >Клавиатура магнитная с подсветкой</p2>
-                <p3 class='opisanie'>Модель: Mercury V60Pro XTAL Гарантийный срок: 1 год Артикул:1110231413</p3>
-                <button class="button1">В корзину</button>
-            </div>
         </div>
-        <div class="glav">
-            <div class="keyBoard1">
-                <img src="https://ekt-basket-cdn-12.geobasket.ru/vol11102/part1110231/1110231413/images/big/1.webp" alt="keyBoard">
-                <p1 class="price">8906₽</p1>
-                <p2 class='keyboard' >Клавиатура магнитная с подсветкой</p2>
-                <p3 class='opisanie'>Модель: Mercury V60Pro XTAL Гарантийный срок: 1 год Артикул:1110231413</p3>
-                <button class="button1">В корзину</button>
-            </div>
-            <div class="keyBoard1">
-                <img src="https://ekt-basket-cdn-12.geobasket.ru/vol11102/part1110231/1110231413/images/big/1.webp" alt="keyBoard">
-                <p1 class="price">8906₽</p1>
-                <p2 class='keyboard' >Клавиатура магнитная с подсветкой</p2>
-                <p3 class='opisanie'>Модель: Mercury V60Pro XTAL Гарантийный срок: 1 год Артикул:1110231413</p3>
-                <button class="button1">В корзину</button>
-            </div>
-            <div class="keyBoard1">
-                <img src="https://ekt-basket-cdn-12.geobasket.ru/vol11102/part1110231/1110231413/images/big/1.webp" alt="keyBoard">
-                <p1 class="price">8906₽</p1>
-                <p2 class='keyboard' >Клавиатура магнитная с подсветкой</p2>
-                <p3 class='opisanie'>Модель: Mercury V60Pro XTAL Гарантийный срок: 1 год Артикул:1110231413</p3>
-                <button @click="emit('reliz')" class="button1">В корзину</button>
-
-            </div>
-        </div>
-        </div>
+    </div>
 
 </template>
 <style>
@@ -63,7 +25,7 @@ import { ref } from 'vue';
         margin-top: 15px;
         margin-left: 15px;
         margin-bottom:15px ;
-        max-width: 350px;
+        max-width: 275px;
         display: flex;
         flex-direction: column;
     }
