@@ -7,7 +7,7 @@ import { ref } from 'vue';
 
     <div class="glaven">
         <div class="glav">
-            <div class="keyBoard1">
+            <div v-for="i in 9" :key="i" class="keyBoard1">
                 <img src="https://ekt-basket-cdn-12.geobasket.ru/vol11102/part1110231/1110231413/images/big/1.webp" alt="keyBoard">
                 <div class="discription">
                     <p1 class="price">8906₽</p1>
