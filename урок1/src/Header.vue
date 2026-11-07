@@ -32,7 +32,7 @@
         margin-left: 100px;
     }
     .hader{
-        gap: 100px;
+        gap:1%;
         display: flex;
         width: 1000px;
         height: 100px;

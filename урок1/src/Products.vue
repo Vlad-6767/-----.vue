@@ -21,8 +21,7 @@ import { ref } from 'vue';
 
 </template>
 <style>
-    .discription{
-        flex-direction: column;
+    .discription{       
         margin-top: 15px;
         margin-left: 15px;
         margin-bottom:15px ;
@@ -31,6 +30,7 @@ import { ref } from 'vue';
         flex-direction: column;
     }
     .keyBoard1{
+
         display: flex;
         flex-direction: column;
         border:2px solid black;
@@ -71,17 +71,19 @@ import { ref } from 'vue';
         width: auto;
     }
     .glav{
-        
+        flex-wrap: wrap;
         display: flex;
         flex-direction: row;
         gap: 50px;
+        margin: 0 auto;
+        width: 80%;
         justify-content: center;
     }
 
     .glaven{
+        justify-content: center;
         display: flex;
         flex-direction:column;
-        gap:15px;
     }
 </style>
 
