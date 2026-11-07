@@ -62,10 +62,12 @@ import { ref } from 'vue';
         color: rgb(59, 123, 153);
         font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         font-size: larger;
+        flex-direction: row;
     }
     .opisanie{
         color: rgb(38, 79, 100);
         font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        width: auto;
     }
     .glav{
         
