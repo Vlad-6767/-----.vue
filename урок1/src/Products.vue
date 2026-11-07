@@ -22,6 +22,7 @@ import { ref } from 'vue';
 </template>
 <style>
     .discription{
+        flex-direction: column;
         margin-top: 15px;
         margin-left: 15px;
         margin-bottom:15px ;
