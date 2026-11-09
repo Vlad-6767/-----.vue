@@ -16,7 +16,7 @@
 
 <style>
     .futter{
-        gap: 300px;
+        gap: auto;
         display: flex;
         width: 1000px;
         height: 100px;

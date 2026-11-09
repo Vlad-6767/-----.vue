@@ -2,6 +2,11 @@
 import { ref } from 'vue'
 
 const korzina = ref(0)
+const isCatalogOpen = ref(false)
+
+function toggleCatalog(){
+  isCatalogOpen.value = !isCatalogOpen.value
+}
 
 function reliz() {
   korzina.value += 1
@@ -11,6 +16,7 @@ defineExpose({ reliz })
 </script>
 
 <template>
+
   <header class="hader">
     <div class="haeder2">
       <img class="menu" src="/meny.svg" alt="Меню">
@@ -22,6 +28,12 @@ defineExpose({ reliz })
       <img class="menu" src="/korz.svg" alt="Корзина">
       <p class="make">Товаров: {{ korzina }}</p>
     </div>
+    <div class="catalog">
+      <h3>Каталог товаров</h3>
+      <button>Клавиатуры</button>
+      <button>Мышки</button>
+      <button>Наушники</button>
+  </div>
   </header>
 </template>
 
@@ -119,5 +131,50 @@ defineExpose({ reliz })
   .make {
     font-size: 11px;
   }
+
+  .menu {
+  cursor: pointer;
 }
+
+.catalog {
+  position: absolute;
+  top: 80px;
+  left: 0;
+
+  width: 220px;
+  padding: 15px;
+
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 0 0 10px 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  z-index: 100;
+}
+
+.catalog button {
+  padding: 10px;
+  background-color: #e5e5e5;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.catalog button:hover {
+  background-color: #cccccc;
+}
+
+@media (max-width: 480px) {
+  .catalog {
+    top: 56px;
+    width: min(220px, 100%);
+    box-sizing: border-box;
+  }
+}
+}
+
 </style>
