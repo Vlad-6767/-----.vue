@@ -19,7 +19,7 @@ defineExpose({ reliz })
 
   <header class="hader">
     <div class="haeder2">
-      <img class="menu" src="/meny.svg" alt="Меню">
+      <img class="menu" src="/meny.svg" alt="Меню" @click="toggleCatalog">
     </div>
     <div class="haeder2">
       <img class="menu" src="/person.svg" alt="Профиль">
@@ -28,12 +28,12 @@ defineExpose({ reliz })
       <img class="menu" src="/korz.svg" alt="Корзина">
       <p class="make">Товаров: {{ korzina }}</p>
     </div>
-    <div class="catalog">
+    <div class="catalog" v-show="isCatalogOpen">
       <h3>Каталог товаров</h3>
       <button>Клавиатуры</button>
       <button>Мышки</button>
       <button>Наушники</button>
-  </div>
+    </div>
   </header>
 </template>
 
@@ -68,6 +68,7 @@ defineExpose({ reliz })
   flex-shrink: 0;
   display: block;
   margin-bottom: 30px;
+  cursor: pointer;
 }
 
 .make {
@@ -77,6 +78,37 @@ defineExpose({ reliz })
   line-height: 1;
 }
 
+.catalog button {
+  padding: 10px;
+  background-color: #e5e5e5;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: left;
+}
+.catalog {
+  position: absolute;
+  top: 80px;
+  left: 0;
+
+  width: 220px;
+  padding: 15px;
+
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 0 0 10px 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  z-index: 100;
+}
+
+.catalog button:hover {
+  background-color: #cccccc;
+  
+}
 @media (max-width: 480px) {
   .hader {
     gap: 16px;
@@ -131,42 +163,10 @@ defineExpose({ reliz })
   .make {
     font-size: 11px;
   }
-
-  .menu {
-  cursor: pointer;
 }
 
-.catalog {
-  position: absolute;
-  top: 80px;
-  left: 0;
 
-  width: 220px;
-  padding: 15px;
 
-  background-color: white;
-  border: 2px solid black;
-  border-radius: 0 0 10px 0;
-
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-
-  z-index: 100;
-}
-
-.catalog button {
-  padding: 10px;
-  background-color: #e5e5e5;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  text-align: left;
-}
-
-.catalog button:hover {
-  background-color: #cccccc;
-}
 
 @media (max-width: 480px) {
   .catalog {
@@ -175,6 +175,6 @@ defineExpose({ reliz })
     box-sizing: border-box;
   }
 }
-}
+
 
 </style>
