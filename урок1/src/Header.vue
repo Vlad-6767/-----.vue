@@ -3,9 +3,15 @@ import { ref } from 'vue'
 
 const korzina = ref(0)
 const isCatalogOpen = ref(false)
+const selectedCategory = ref('')
 
 function toggleCatalog(){
   isCatalogOpen.value = !isCatalogOpen.value
+}
+
+function selectCategory(name) {
+  selectedCategory.value = name
+  isCatalogOpen.value = false
 }
 
 function reliz() {
@@ -30,15 +36,20 @@ defineExpose({ reliz })
     </div>
     <div class="catalog" v-show="isCatalogOpen">
       <h3>Каталог товаров</h3>
-      <button>Клавиатуры</button>
-      <button>Мышки</button>
-      <button>Наушники</button>
+      <button @click="selectCategory('Клавиатуры')">Клавиатуры</button>
+      <button @click="selectCategory('Мышки')">Мышки</button>
+      <button @click="selectCategory('Наушники')">Наушники</button>
     </div>
   </header>
+
+  <p v-if="selectedCategory" class="selected">
+    Вы выбрали: {{ selectedCategory }}
+  </p>
 </template>
 
 <style scoped>
 .hader {
+  position: relative;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -78,6 +89,13 @@ defineExpose({ reliz })
   line-height: 1;
 }
 
+.selected {
+  margin: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #222;
+}
+
 .catalog button {
   padding: 10px;
   background-color: #e5e5e5;
@@ -88,7 +106,7 @@ defineExpose({ reliz })
 }
 .catalog {
   position: absolute;
-  top: 80px;
+  top: 100%;
   left: 0;
 
   width: 220px;
@@ -103,6 +121,7 @@ defineExpose({ reliz })
   gap: 10px;
 
   z-index: 100;
+  box-sizing: border-box;
 }
 
 .catalog button:hover {
@@ -165,14 +184,9 @@ defineExpose({ reliz })
   }
 }
 
-
-
-
 @media (max-width: 480px) {
   .catalog {
-    top: 56px;
     width: min(220px, 100%);
-    box-sizing: border-box;
   }
 }
 
