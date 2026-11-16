@@ -1,17 +1,28 @@
 <script setup> 
     import { disposeEmitNodes } from 'typescript';
-import { ref } from 'vue';
+    import { ref } from 'vue';
     const emit =  defineEmits(['reliz'])
+    const products = ref([
+        { id: 1, name: 'DAREU', price: 8906 },
+        { id: 2, name: 'G75', price: 3400 },
+        {id: 3,name: "aula",price:3400},
+        {id: 4, name: 'Razer',price:4100},
+        {id:5,name:'HUAWEI',price:3100},
+        {id:6,name:' Furycube',price:1800},
+        {id:7,name:'Mchose K7',price:6700},
+        {id:8,name:'ajazz',price:1800},
+        {id:9,name:'Furycube',price:2100},
+        ])
 </script>
 <template>
 
     <div class="glaven">
         <div class="glav">
-            <div v-for="i in 9" :key="i" class="keyBoard1">
+            <div v-for="product in products" :key="product.id" class="keyBoard1">
                 <img src="https://ekt-basket-cdn-12.geobasket.ru/vol11102/part1110231/1110231413/images/big/1.webp" alt="keyBoard">
                 <div class="discription">
-                    <p1 class="price">8906₽</p1>
-                    <p2 class='keyboard' >Клавиатура магнитная с подсветкой</p2>
+                    <p1 class="price">{{ product.price }}₽</p1>
+                    <p2 class='keyboard' >{{ product.name }}</p2>
                     <p3 class='opisanie'>Модель: Mercury V60Pro XTAL Гарантийный срок: 1 год Артикул:1110231413</p3>
                 </div>
                 <button @click="emit('reliz')"   class="button1">В корзину</button>
